@@ -20,6 +20,7 @@ namespace WindowsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             KaiPiao.succ = true;
+            double val = KaiPiao.total_value;
             int x = 0;
             int y = 0;
             try

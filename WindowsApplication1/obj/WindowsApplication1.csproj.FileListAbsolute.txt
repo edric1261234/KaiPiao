@@ -14,7 +14,6 @@ C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\Win
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\bin\Release\Kaipiao.pdb
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\ResolveAssemblyReference.cache
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.Form1.resources
-C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.Form2.resources
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.Form3.resources
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.KaiPiao.resources
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.PrintForm.resources
@@ -22,3 +21,4 @@ C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\Win
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\WindowsApplication1.csproj.GenerateResource.Cache
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\Kaipiao.exe
 C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\Kaipiao.pdb
+C:\Users\huaqingbo\Documents\Visual Studio 2005\Projects\WindowsApplication1\WindowsApplication1\obj\Release\Kaipiao.BaoShuiChuLi.resources

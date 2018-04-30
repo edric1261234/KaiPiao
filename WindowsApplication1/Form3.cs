@@ -18,7 +18,7 @@ namespace WindowsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             KaiPiao f = new KaiPiao();
-            f.ShowDialog();
+            f.Show();
         }
     }
 }

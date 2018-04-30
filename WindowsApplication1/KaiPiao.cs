@@ -7,24 +7,25 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Drawing.Printing;
+using ShenBao;
 
 
 namespace WindowsApplication1
 {
     public partial class KaiPiao : Form
     {
+        const float SHUILV = (float)0.17; //税率0.17
+        const int COLUMN_SHUILV = 6;  // 税率
+        const int COLUMN_COUNT = 3; //数量
+        const int COLUMN_PRICE = 4; //单价
+        const int COLUMN_JINER = 5; //金额，不含税
+        const int COLUMN_SHUIER = 7; // 税额
         public KaiPiao()
         {
             InitializeComponent();
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(printDocument1_PrintPage);
-            p_x = 0;
-            p_y = 0;
+            List1[COLUMN_SHUILV, 0].Value = SHUILV;
         }
 
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-            List1[0, 0].Value = "abb";
-        }
 
         public static bool succ = false;
 
@@ -52,22 +53,44 @@ namespace WindowsApplication1
             }        
         }
 
+        public static double total_value = 0;
         private void List1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (List1[5, 0].Value != null)
+            int current_row = List1.RowCount - 2;
+            if (current_row < 0)
+                return;
+
+            //金额=数量*单价
+            if (List1[COLUMN_COUNT, current_row].Value != null && List1[COLUMN_PRICE, current_row].Value != null)
             {
-                label18.Text = List1[5, 0].Value.ToString();
+                double total_price = double.Parse(List1[COLUMN_COUNT, current_row].Value.ToString()) * double.Parse(List1[COLUMN_PRICE, current_row].Value.ToString());
+
+                List1[COLUMN_JINER, current_row].Value = total_price.ToString();
+                List1[COLUMN_SHUIER, current_row].Value = (total_price * SHUILV).ToString("f2");
             }
-            if (List1[7, 0].Value != null)
+
+            //
+            double total_jiner = 0;
+            double total_shuier = 0;
+            for (int i = 0; i < List1.RowCount - 1; i++) 
             {
-                label20.Text = List1[7, 0].Value.ToString();
+                if (List1[COLUMN_JINER, i].Value == null || List1[COLUMN_SHUIER, i].Value == null)
+                    continue;
+
+                total_jiner += double.Parse(List1[COLUMN_JINER, i].Value.ToString()) ;
+                total_shuier += double.Parse(List1[COLUMN_SHUIER, i].Value.ToString()); 
             }
-            if (!string.IsNullOrEmpty(label18.Text) && !string.IsNullOrEmpty(label20.Text))
+
+            _lbl_total_jiner.Text = total_jiner.ToString();
+            _lbl_total_shuier.Text = total_shuier.ToString();
+        
+
+            if (!string.IsNullOrEmpty(_lbl_total_jiner.Text) && !string.IsNullOrEmpty(_lbl_total_shuier.Text))
             {
                 try
                 {
-                    double a = double.Parse(label18.Text) + double.Parse(label20.Text);
-                    label21.Text = a.ToString();
+                    total_value = double.Parse(_lbl_total_jiner.Text);// +double.Parse(label20.Text);
+                    label21.Text = total_value.ToString();
                 }
                 catch
                 {
@@ -78,22 +101,30 @@ namespace WindowsApplication1
 
         private PrintDocument printDocument1 = new PrintDocument();
 
-        int p_x, p_y;
+
         public void Print(int x,int y)
         {
-            p_x = x;
-            p_y = y;
-            this.printDocument1.Print();//直接打印
+            save_data();
+            MessageBox.Show("打印成功");
+  
         }
-        //打印内容的设置
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            //打印内容 为 局部的 this.groupBox9
-            Bitmap _NewBitmap = new Bitmap(groupBox9.Width, groupBox9.Height);
-            groupBox9.DrawToBitmap(_NewBitmap, new Rectangle(0, 0, _NewBitmap.Width, _NewBitmap.Height));
-            e.Graphics.DrawImage(_NewBitmap, p_x, p_y, _NewBitmap.Width, _NewBitmap.Height);
 
+        private void save_data()
+        {
+            INIClass ini_class = new INIClass("D:\\yinuo.ini");
+            ini_class.IniWriteValue("KaiPiao", "HeJi", total_value.ToString());
+            ini_class.IniWriteValue("KaiPiao", "ShuiEr", _lbl_total_shuier.Text);
+          
         }
+
+
+        private void List1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            int row_count = List1.RowCount;
+            List1[COLUMN_SHUILV, row_count - 1].Value = SHUILV;
+        }
+
+     
 
     }
 }

@@ -1,6 +1,6 @@
-namespace WindowsApplication1
+namespace Kaipiao
 {
-    partial class Form2
+    partial class BaoShuiChuLi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@ namespace WindowsApplication1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoShuiChuLi));
+            this.btn_sbhz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_sbhz
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Location = new System.Drawing.Point(435, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(244, 24);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_sbhz.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sbhz.BackgroundImage")));
+            this.btn_sbhz.Location = new System.Drawing.Point(175, 95);
+            this.btn_sbhz.Name = "btn_sbhz";
+            this.btn_sbhz.Size = new System.Drawing.Size(70, 74);
+            this.btn_sbhz.TabIndex = 0;
+            this.btn_sbhz.UseVisualStyleBackColor = true;
+            this.btn_sbhz.Click += new System.EventHandler(this.btn_sbhz_Click);
             // 
-            // Form2
+            // BaoShuiChuLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1303, 718);
-            this.Controls.Add(this.button1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.ClientSize = new System.Drawing.Size(775, 441);
+            this.Controls.Add(this.btn_sbhz);
+            this.Name = "BaoShuiChuLi";
+            this.Text = "BaoShuiChuLi";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_sbhz;
     }
 }

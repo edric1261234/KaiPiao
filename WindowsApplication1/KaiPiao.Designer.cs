@@ -49,11 +49,11 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this._lbl_total_shuier = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this._lbl_total_jiner = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -122,33 +122,32 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel1.Text = "放弃";
-            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel2.Text = "编辑";
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel3.Text = "打印";
             this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel4.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel4.Text = "统计";
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(29, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel5.Text = "格式";
             // 
             // groupBox9
@@ -176,11 +175,11 @@
             this.groupBox5.Controls.Add(this.label32);
             this.groupBox5.Controls.Add(this.label31);
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this._lbl_total_shuier);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this._lbl_total_jiner);
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.label12);
@@ -322,15 +321,15 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "销";
             // 
-            // label20
+            // _lbl_total_shuier
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.Location = new System.Drawing.Point(676, 17);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 16);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "0";
+            this._lbl_total_shuier.AutoSize = true;
+            this._lbl_total_shuier.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this._lbl_total_shuier.Location = new System.Drawing.Point(676, 17);
+            this._lbl_total_shuier.Name = "_lbl_total_shuier";
+            this._lbl_total_shuier.Size = new System.Drawing.Size(16, 16);
+            this._lbl_total_shuier.TabIndex = 0;
+            this._lbl_total_shuier.Text = "0";
             // 
             // label17
             // 
@@ -362,15 +361,15 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "0";
             // 
-            // label18
+            // _lbl_total_jiner
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(551, 17);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "0";
+            this._lbl_total_jiner.AutoSize = true;
+            this._lbl_total_jiner.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this._lbl_total_jiner.Location = new System.Drawing.Point(551, 17);
+            this._lbl_total_jiner.Name = "_lbl_total_jiner";
+            this._lbl_total_jiner.Size = new System.Drawing.Size(16, 16);
+            this._lbl_total_jiner.TabIndex = 0;
+            this._lbl_total_jiner.Text = "0";
             // 
             // label16
             // 
@@ -421,7 +420,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.06519F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.934813F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -437,7 +436,7 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(673, 3);
+            this.groupBox3.Location = new System.Drawing.Point(669, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(43, 137);
             this.groupBox3.TabIndex = 1;
@@ -484,7 +483,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(664, 137);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(660, 137);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // groupBox1
@@ -496,7 +495,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(40, 131);
+            this.groupBox1.Size = new System.Drawing.Size(36, 131);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -551,7 +550,7 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(49, 3);
+            this.groupBox2.Location = new System.Drawing.Point(45, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(612, 131);
             this.groupBox2.TabIndex = 1;
@@ -657,6 +656,8 @@
             this.List1.RowTemplate.Height = 23;
             this.List1.Size = new System.Drawing.Size(850, 168);
             this.List1.TabIndex = 0;
+            this.List1.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.List1_CellMouseMove);
+            this.List1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.List1_RowsAdded);
             // 
             // Column1
             // 
@@ -783,11 +784,11 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label _lbl_total_shuier;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label _lbl_total_jiner;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label12;

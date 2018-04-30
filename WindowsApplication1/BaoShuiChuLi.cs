@@ -6,19 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsApplication1
+namespace Kaipiao
 {
-    public partial class Form2 : Form
+    public partial class BaoShuiChuLi : Form
     {
-        public Form2()
+        public BaoShuiChuLi()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_sbhz_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
-            f.ShowDialog();
+            MessageBox.Show("上报成功");
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using Kaipiao;
 
 namespace WindowsApplication1
 {
@@ -20,7 +21,18 @@ namespace WindowsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            btn_kaipiao.Visible = true;
+        }
+
+        private void btn_kaipiao_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.Show();
+        }
+
+        private void _btn_bscl_Click(object sender, EventArgs e)
+        {
+            BaoShuiChuLi f = new BaoShuiChuLi();
             f.Show();
         }
     }
